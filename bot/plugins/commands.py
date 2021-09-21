@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) @AlbertEinsteinTG & PR0FESS0R-99
+# (c) @Michale_Scofiled
 
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
@@ -11,28 +11,28 @@ from bot import MT_UPDATE, MT_GROUP, MT_CHANNEL, MT_LINK
 from bot.motech import MT_UPDATES
 db = Database()
 
-TEAM = "MoTech"
+TEAM = "Infotel-Sinhala"
 
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
-    update_channel = MT_UPDATE
+    update_channel = Infotel-Sinhala
     if update_channel:
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
             if user.status == "kicked out":
-               await update.reply_text("😔 Sorry Dude, You are **🅱︎🅰︎🅽︎🅽︎🅴︎🅳︎ 🤣🤣🤣**")
+               await update.reply_text("😔 Sorry Dude, You are **🅱︎🅰︎🅽︎🅽︎🅴︎🅳︎**")
                return
         except UserNotParticipant:
             #await update.reply_text(f"Join @{update_channel} To Use Me")
             await update.reply_text(
                 text="<b>🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹</b>",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text=" 📢 Join My Update Channel 📢", url=f"https://t.me/{MT_UPDATE}")]
+                    [ InlineKeyboardButton(text=" 📢 Join My Update Channel 📢", url=f"https://t.me/{InfotelSinhalen_botZ}")]
               ])
             )
             return
         except Exception:
-            await update.reply_text(f"@{MT_UPDATE}")
+            await update.reply_text(f"@{InfotelSinhalen_botZ}")
             return      
     try:
         file_uid = update.command[1]
@@ -57,13 +57,13 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔔Join Main Channel🔔', url=f"https://t.me/{MT_CHANNEL}"
+                                    '🔔Join Main Channel🔔', url=f"https://t.me/{InfotelSinhalen_botZ}"
                                 )
                         ],
                         [
                             InlineKeyboardButton
                                 (
-                                    '🤖 Bot Updates🤖', url=f"t.me/{MT_UPDATES}"
+                                    '🤖 Bot Updates🤖', url=f"t.me/{InfotelSinhalen_botZ}"
                                 )
                         ]
                     ]
@@ -75,8 +75,8 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('🗣️ Group', url=f'https://t.me/{MT_GROUP}'),
-        InlineKeyboardButton('📢 Channel', url =f'https://t.me/{MT_CHANNEL}')
+        InlineKeyboardButton('🗣️ Group', url=f'https://t.me/{InfotelSinhala_Chat}'),
+        InlineKeyboardButton('📢 Channel', url =f'http://t.me/{InfotelSinhalen_botZ}')
     ],[
         InlineKeyboardButton('🤔Help', callback_data="help"),
         InlineKeyboardButton('About😎', callback_data="about"),
@@ -101,7 +101,7 @@ async def help(bot, update):
         InlineKeyboardButton('Support', url='t.me/Mo_Tech_Group'),
         InlineKeyboardButton('Bot Updates', url=f't.me/{MT_UPDATES}')
     ],[
-        InlineKeyboardButton('🖥️ How To Own This Bot 🖥️', url=f'{MT_LINK}')
+        InlineKeyboardButton('🖥️ Owner 🖥️', url=f'{Michale_Scofield}')
     ],[   
         InlineKeyboardButton('🏠Home', callback_data='start'),
         InlineKeyboardButton('About😎', callback_data='about'),
