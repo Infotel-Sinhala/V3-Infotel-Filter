@@ -36,7 +36,7 @@ async def connect(bot: Bot, update):
     try:
         if target_chat[1].startswith("@"):
             if len(target_chat[1]) < 5:
-                await update.reply_text("Invalid Username...!!!")
+                await update.reply_text("User Name Is Invalid !")
                 return
             target = target_chat[1]
             
